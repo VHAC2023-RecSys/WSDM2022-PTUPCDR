@@ -60,7 +60,7 @@ class Run:
             "ptupcdr_rmse": 10,
         }
 
-    def seq_extractor(self, x):
+    def seq_extractor(self, x: str):
         x = x.rstrip("]").lstrip("[").split(", ")
         for i in range(len(x)):
             try:
@@ -69,7 +69,7 @@ class Run:
                 x[i] = self.iid_all
         return np.array(x)
 
-    def read_log_data(self, path, batchsize, history=False):
+    def read_log_data(self, path: str, batchsize: int, history=False):
         if not history:
             cols = ["uid", "iid", "y"]
             x_col = ["uid", "iid"]
