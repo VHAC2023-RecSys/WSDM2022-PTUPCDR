@@ -1,5 +1,5 @@
 {
-  "use_cuda": 0,
+  "use_cuda": true,
   "root": "./data/",
   "src_tgt_pairs": {
     "1": {
